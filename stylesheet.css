@@ -1,0 +1,28 @@
+body {
+    background-color: #6caff1;
+}
+.digits {
+    color: white;
+    text-align: center;
+    font-size: 120px;
+    font-family: 'Roboto Slab', serif;
+}
+
+#timer {
+}
+.blinky {
+}
+<!--.blinker {
+    width: 50px;
+    color: white;
+    float: left;
+    margin: auto;
+	position: relative;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 100px;
+    font-family: 'Roboto Slab', serif;
+}
+#hour {
+    text-align: right;
+}-->
