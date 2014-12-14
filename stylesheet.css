@@ -1,6 +1,11 @@
 body {
     background-color: #6caff1;
 }
+
+.container {
+    background-color: yellow;
+}
+
 .digits {
     color: white;
     text-align: center;
@@ -12,6 +17,7 @@ body {
 }
 .blinky {
 }
+
 <!--.blinker {
     width: 50px;
     color: white;
