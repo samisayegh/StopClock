@@ -1,4 +1,9 @@
 $(document).ready(function() {
+
+    window.onbeforeunload = function() {
+        return "WARNING...THE CLOCK WILL BE RESET";
+    }
+
 	var start = new Date().getTime(),
     elapsed = '0.0';
     
@@ -51,6 +56,7 @@ $(document).ready(function() {
         
         console.log('success');
         console.log(time);
+
 
     }, 100);
 });
