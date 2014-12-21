@@ -40,7 +40,7 @@ $(document).ready(function() {
                 console.log ('tock');
             }*/
         
-        $('#timer').html(hours + '<span class = "blinky"> : </span>' + pad(minutes) + '<span class = "blinky"> : </span>' + pad(seconds));
+        $('.digits').html(hours + '<span class = "blinky"> : </span>' + pad(minutes) + '<span class = "blinky"> : </span>' + pad(seconds));
         /*$('#hour').html(hours);
         $('#minute').html(pad(minutes));
         $('#second').html(pad(seconds));*/
