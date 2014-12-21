@@ -10,8 +10,7 @@ $(document).ready(function() {
 
     */
 
-	var start = new Date().getTime(),
-    elapsed = '0.0';
+	
     
     //function pad makes it so that a number has a 0 before it if it's a single digit.
     function pad(d) {
@@ -19,30 +18,34 @@ $(document).ready(function() {
     }
     
     $('.btn').click(function(){
-    	window.setInterval(function(){
-        var time = new Date().getTime() - start;
-
-        elapsed = Math.floor(time / 1000) ;
-
-        var t = 10800-elapsed;
-        var hours = Math.floor(
-            t/3600
-            );
-        var minutes = Math.floor(
-            (t%3600)/60
-            );
-        var seconds = Math.floor(
-            (t%3600)%60
-            );
+    	var start = new Date().getTime();
+    	var elapsed = '0.0';
+	    
+	    window.setInterval(function(){
         
-        $('.digits').html(hours + '<span class = "blinky"> : </span>' + pad(minutes) + '<span class = "blinky"> : </span>' + pad(seconds));
-        /*$('#hour').html(hours);
-        $('#minute').html(pad(minutes));
-        $('#second').html(pad(seconds));*/
-        
-        console.log('success');
-        console.log(time);
+	    	var time = new Date().getTime() - start;
 
-    	}, 100);
+	        elapsed = Math.floor(time / 1000) ;
+
+	        var t = 10800-elapsed;
+	        var hours = Math.floor(
+	            t/3600
+	            );
+	        var minutes = Math.floor(
+	            (t%3600)/60
+	            );
+	        var seconds = Math.floor(
+	            (t%3600)%60
+	            );
+	        
+	        $('.digits').html(hours + '<span class = "blinky"> : </span>' + pad(minutes) + '<span class = "blinky"> : </span>' + pad(seconds));
+	        /*$('#hour').html(hours);
+	        $('#minute').html(pad(minutes));
+	        $('#second').html(pad(seconds));*/
+	        
+	        console.log('success');
+	        console.log(time);
+
+	    	}, 100);
     });
 });
