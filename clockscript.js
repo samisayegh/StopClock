@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
-    /* WARNING MESSAGE FOR REFRESH. TBA upon completion.
+    /* 
+
+    WARNING MESSAGE FOR REFRESH. TBA upon completion.
     
     window.onbeforeunload = function() {
         return "WARNING...THE CLOCK WILL BE RESET";
