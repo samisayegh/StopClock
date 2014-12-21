@@ -2,22 +2,33 @@ body {
     background-color: #6caff1;
 }
 
-.container {
-    background-color: yellow;
+.wrapper {
+    width: 800px;
+    background-color: green;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 200px;
+    font-family: 'Roboto Slab', serif;
 }
 .btn {
     background-color: orange;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 }
 .digits {
     color: white;
-    text-align: center;
     font-size: 120px;
-    font-family: 'Roboto Slab', serif;
 }
 
+<<<<<<< HEAD
 
 <!--.blinker {
+=======
+/*.blinker {
+>>>>>>> origin/master
     width: 50px;
     color: white;
     float: left;
@@ -28,6 +39,8 @@ body {
     font-size: 100px;
     font-family: 'Roboto Slab', serif;
 }
+
 #hour {
-    text-align: right;
-}-->
+    text-align: right;*/
+
+
