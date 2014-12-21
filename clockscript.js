@@ -44,15 +44,6 @@ $(document).ready(function() {
         /*$('#hour').html(hours);
         $('#minute').html(pad(minutes));
         $('#second').html(pad(seconds));*/
-
-        if (seconds % 2 == 0) {
-                $('.blinky').css("visibility", "visible");
-                console.log ('tick');
-            }
-        else {
-                $('.blinky').css("visibility", "hidden");
-                console.log ('tock');
-            }
         
         console.log('success');
         console.log(time);
