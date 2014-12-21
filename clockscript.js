@@ -16,16 +16,16 @@ $(document).ready(function() {
     function pad(d) {
     return (d < 10) ? '0' + d.toString() : d.toString();
     }
-    
+    var start = 0;
     $('.btn').click(function(){
-    	var start = new Date().getTime();
-    	var elapsed = '0.0';
+
+    	start = new Date().getTime();
 	    
 	    window.setInterval(function(){
         
 	    	var time = new Date().getTime() - start;
 
-	        elapsed = Math.floor(time / 1000) ;
+	        var elapsed = Math.floor(time / 1000) ;
 
 	        var t = 10800-elapsed;
 	        var hours = Math.floor(
@@ -45,7 +45,7 @@ $(document).ready(function() {
 	        
 	        console.log('success');
 	        console.log(time);
-
-	    	}, 100);
+	        
+	    	}, 400);
     });
 });
