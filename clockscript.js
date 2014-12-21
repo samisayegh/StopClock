@@ -12,13 +12,11 @@ $(document).ready(function() {
     return (d < 10) ? '0' + d.toString() : d.toString();
     }
     
-    window.setInterval(function(){
+    $('.btn').click(function(){
+    	window.setInterval(function(){
         var time = new Date().getTime() - start;
 
         elapsed = Math.floor(time / 1000) ;
-        /*if(Math.round(elapsed) == elapsed) { 
-            elapsed += '.0'; 
-        }*/
 
         var t = 10800-elapsed;
         var hours = Math.floor(
@@ -30,15 +28,6 @@ $(document).ready(function() {
         var seconds = Math.floor(
             (t%3600)%60
             );
-            
-        /*if (seconds % 2 == 0) {
-                $('.blinker').css("visibility", "visible");
-                console.log ('tick');
-            }
-        else {
-                $('.blinker').css("visibility", "hidden");
-                console.log ('tock');
-            }*/
         
         $('.digits').html(hours + '<span class = "blinky"> : </span>' + pad(minutes) + '<span class = "blinky"> : </span>' + pad(seconds));
         /*$('#hour').html(hours);
@@ -48,6 +37,6 @@ $(document).ready(function() {
         console.log('success');
         console.log(time);
 
-
-    }, 100);
+    	}, 100);
+    });
 });
