@@ -5,7 +5,10 @@ body {
 .container {
     background-color: yellow;
 }
-
+.btn {
+    background-color: orange;
+    
+}
 .digits {
     color: white;
     text-align: center;
