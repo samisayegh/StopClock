@@ -16,14 +16,10 @@ $(document).ready(function() {
     function pad(d) {
     return (d < 10) ? '0' + d.toString() : d.toString();
     }
-    var start = 0;
-    $('.btn').click(function(){
 
-    	start = new Date().getTime();
-	    
-	    window.setInterval(function(){
-        
-	    	var time = new Date().getTime() - start;
+    // Function takes care of counting down
+    function timer(){
+        	var time = new Date().getTime() - initialTime;
 
 	        var elapsed = Math.floor(time / 1000) ;
 
@@ -38,14 +34,38 @@ $(document).ready(function() {
 	            (t%3600)%60
 	            );
 	        
-	        $('.digits').html(hours + '<span class = "blinky"> : </span>' + pad(minutes) + '<span class = "blinky"> : </span>' + pad(seconds));
-	        /*$('#hour').html(hours);
-	        $('#minute').html(pad(minutes));
-	        $('#second').html(pad(seconds));*/
+	        $('.digits').html(hours + ' : ' + pad(minutes) + ' : ' + pad(seconds));
 	        
 	        console.log('success');
 	        console.log(time);
-	        
-	    	}, 400);
+        };
+	
+	var initialTime = 0;
+	var loop = 0;
+
+	//Start button event handler
+    $('.start').click(function(){
+
+    	initialTime = new Date().getTime();
+	    
+	    loop = setInterval(function(){ timer()}, 1000);
+
+	    $('.start').html("Reset");
+	    $('.start').addClass('reset');
+	    $('.start').removeClass('start');
+    
+
     });
+
+    //Reset button event handler
+	//This part is not working because browser is still in Start click handler
+	//Starts working if placed inside the above event handler.
+    $('.reset').click(function(){
+    	clearInterval(loop);
+    	$('.reset').html('Start');
+    	$('.reset').addClass('start');
+    	$('.reset').removeClass('reset');
+    	return;
+    });
+    
 });

@@ -15,25 +15,12 @@ body {
 .btn {
     background-color: orange;
 }
+
+.reset {
+    background-color: yellow;
+}
+
 .digits {
     color: white;
     font-size: 120px;
 }
-
-/*.blinker {
->>>>>>> origin/master
-    width: 50px;
-    color: white;
-    float: left;
-    margin: auto;
-	position: relative;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 100px;
-    font-family: 'Roboto Slab', serif;
-}
-
-#hour {
-    text-align: right;*/
-
-
