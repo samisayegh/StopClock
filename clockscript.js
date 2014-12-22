@@ -40,27 +40,26 @@ $(document).ready(function() {
 	        console.log(time);
         };
 	
-	var initialTime = 0;
+	var initialTime = null;
+	var ticker = null;
+	var clicked = true;
 
 	//Start button event handler
     $(".start").click(function(){
 
-    	if (initialTime == 0) {
-	    	initialTime = new Date().getTime();
-		    var loop = setInterval(function(){ timer()}, 1000);
-	    	
+    	if (clicked == true) {
+			initialTime = new Date().getTime();
+	    	ticker = setInterval(function(){ timer();}, 1000);
 		    $(".start").html("Reset");
-		    $(".start").addClass("reset");
-		    $(".start").removeClass("start");  
-		    
-		    //Reset button event handler
-		    $(".reset").click(function(){
-		    	clearInterval(loop);
-		    	$(".reset").html("Start");
-		    	$('.digits').html("3 : 00 : 00");
-		    	$(".reset").addClass("start");
-		    	$(".reset").removeClass("reset");
-		    });
-    	};
+    	}
+
+    	else {
+    		clearInterval(ticker)
+	    	$(".start").html("Start");
+	    	$('.digits').html("3 : 00 : 00");
+    	}
+    	
+    	clicked = !clicked;
+	    
     });
 });
