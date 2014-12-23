@@ -42,7 +42,7 @@ $(document).ready(function() {
         //alarm sequence
         switch(elapsed){
         	//70 min break
-        	case 5:
+        	case 4200:
         		recessAlarm();
         		break;
         	//80 min resume
