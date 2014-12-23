@@ -15,7 +15,7 @@ $(document).ready(function() {
     //function pad makes it so that a number has a 0 before it if it's a single digit.
     function pad(d) {
     return (d < 10) ? '0' + d.toString() : d.toString();
-    	};
+    	}
 
     // Function takes care of counting down
     function timer(){
@@ -38,8 +38,11 @@ $(document).ready(function() {
 	        
 	        console.log('success');
 	        console.log(time);
-        };
-	
+        }
+	function alarm(){
+		var audio = new Audio('Sounds/Ship_Bell.mp3');
+		audio.play();
+	}
 	var initialTime = null;
 	var ticker = null;
 	var clicked = true;
@@ -51,6 +54,7 @@ $(document).ready(function() {
 			initialTime = new Date().getTime();
 	    	ticker = setInterval(function(){ timer();}, 1000);
 		    $(".start").html("Reset");
+		    alarm();
     	}
 
     	else {
@@ -60,6 +64,5 @@ $(document).ready(function() {
     	}
     	
     	clicked = !clicked;
-	    
     });
 });
