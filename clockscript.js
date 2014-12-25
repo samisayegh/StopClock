@@ -10,8 +10,6 @@ $(document).ready(function() {
 
     */
 
-	
-    
     //function pad makes it so that a number has a 0 before it if it's a single digit.
     function pad(d) {
     	return (d < 10) ? '0' + d.toString() : d.toString();
@@ -39,8 +37,13 @@ $(document).ready(function() {
         console.log('success');
         console.log(time);
         
-        alarmSequence(elapsed, totalInterval, tickerId);
-        
+        if (display == '.recessDigits' && elapsed == totalInterval) {
+        	clearInterval(tickerId);
+        	$(display).html('');
+        }
+        else {
+        	alarmSequence(elapsed, totalInterval, tickerId);
+        }
     }
 
 	//alarm sequence
@@ -74,6 +77,8 @@ $(document).ready(function() {
 	function recessAlarm(){
 		var audio = new Audio('sounds/Temple_Bell.mp3');
 		audio.play();
+		var startTime = new Date().getTime();
+		var recessTicker = setInterval(function(){timer(startTime, 600, recessTicker, '.recessDigits');}, 1000);
 	}
 
 	function resumeAlarm(){

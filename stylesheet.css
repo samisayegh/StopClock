@@ -20,7 +20,7 @@ body {
     background-color: yellow;
 }
 
-.digits {
+.digits,.recessDigits {
     color: white;
     font-size: 120px;
 }
