@@ -17,13 +17,13 @@ $(document).ready(function() {
     	return (d < 10) ? '0' + d.toString() : d.toString();
     }
 
-    // Function takes care of counting down
-    function timer(){
+    // function takes care of counting down
+    function timer(initialTime, totalInterval, tickerId, display){
     	var time = new Date().getTime() - initialTime;
 
-        elapsed = Math.floor(time / 1000) ;
+        var elapsed = Math.floor(time / 1000) ;
 
-        var t = 10800-elapsed;
+        var t = totalInterval-elapsed;
         var hours = Math.floor(
             t/3600
             );
@@ -34,41 +34,45 @@ $(document).ready(function() {
             (t%3600)%60
             );
         
-        $('.digits').html(hours + ' : ' + pad(minutes) + ' : ' + pad(seconds));
+        $(display).html(hours + ' : ' + pad(minutes) + ' : ' + pad(seconds));
         
         console.log('success');
         console.log(time);
-
-        //alarm sequence
-        switch(elapsed){
-        	//70 min break
-        	case 4200:
-        		recessAlarm();
-        		break;
-        	//80 min resume
-        	case 4800:
-        		resumeAlarm();
-        		break;
-        	//130 min break
-        	case 7800:
-        		recessAlarm();
-        		break;
-        	//140 min resume
-        	case 8400:
-        		resumeAlarm();
-        	//170 min break
-        	case 10200:
-        		recessAlarm();
-        	//Closing alarm. Productivity success!
-        	case 10800:
-        		closingAlarm();
-        		break;
-        }
-
+        
+        alarmSequence(elapsed, totalInterval, tickerId);
+        
     }
-	
+
+	//alarm sequence
+	function alarmSequence(elapsed, totalInterval, tickerId){
+		switch(elapsed){
+	    	//70 min break
+	    	case 4200:
+	    		recessAlarm();
+	    		break;
+	    	//80 min resume
+	    	case 4800:
+	    		resumeAlarm();
+	    		break;
+	    	//130 min break
+	    	case 7800:
+	    		recessAlarm();
+	    		break;
+	    	//140 min resume
+	    	case 8400:
+	    		resumeAlarm();
+	    	//170 min break
+	    	case 10200:
+	    		recessAlarm();
+	    	//Closing alarm. Productivity success!
+	    	case totalInterval:
+	    		closingAlarm(tickerId);
+	    		break;
+	    }
+
+	}
 	function recessAlarm(){
-		var audio = new Audio('sounds/Ship_Bell.mp3');
+		var audio = new Audio('sounds/Temple_Bell.mp3');
 		audio.play();
 	}
 
@@ -77,29 +81,27 @@ $(document).ready(function() {
 		audio.play();
 	}
 
-	function closingAlarm(){
-		var audio = new Audio('sounds/Temple_Bell');
+	function closingAlarm(tickerId){
+		var audio = new Audio('sounds/Ship_Bell.mp3');
 		audio.play();
-		clearInterval(ticker);
+		clearInterval(tickerId);
 	}
 	
-	var elapsed = 0;
-	var initialTime = null;
-	var ticker = null;
 	var clicked = true;
-
+	var ticker;
+	
 	//Start button event handler
-    $(".start").click(function(){
-
+    $(".btn").click(function(){
+		
     	if (clicked == true) {
 			initialTime = new Date().getTime();
-	    	ticker = setInterval(function(){ timer();}, 1000);
-		    $(".start").html("Reset");
+	    	ticker = setInterval(function(){ timer(initialTime, 10800, ticker, '.digits');}, 1000);
+		    $(".btn").html("Reset");
     	}
 
     	else {
     		clearInterval(ticker)
-	    	$(".start").html("Start");
+	    	$(".btn").html("Start");
 	    	$('.digits').html("3 : 00 : 00");
     	}
     	
