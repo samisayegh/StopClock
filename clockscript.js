@@ -99,9 +99,9 @@ $(document).ready(function() {
     $(".btn").click(function(){
 		
     	if (clicked == true) {
-			initialTime = new Date().getTime();
+		initialTime = new Date().getTime();
 	    	ticker = setInterval(function(){ timer(initialTime, 10800, ticker, '.digits');}, 1000);
-		    $(".btn").html("Reset");
+		$(".btn").html("Reset");
     	}
 
     	else {
