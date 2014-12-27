@@ -96,18 +96,18 @@ $(document).ready(function() {
 	var ticker;
 	
 	//Start button event handler
-    $(".btn").click(function(){
+    $(".button").click(function(){
 		
     	if (clicked == true) {
 		initialTime = new Date().getTime();
 	    	ticker = setInterval(function(){ timer(initialTime, 10800, ticker, '.digits');}, 1000);
-		$(".btn").html("Reset");
+		$(".button").html("Reset");
     	}
 
     	else {
     		clearInterval(ticker)
-	    	$(".btn").html("Start");
-	    	$('.digits').html("3 : 00 : 00");
+	    	$(".button").html("Start");
+	    	$(".digits").html("3 : 00 : 00");
     	}
     	
     	clicked = !clicked;
