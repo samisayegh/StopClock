@@ -1,26 +1,8 @@
-body {
-    background-color: #6caff1;
-}
-
-.wrapper {
-    width: 800px;
-    background-color: green;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 200px;
-    font-family: 'open sans';
-    font-weight: 300;
-}
-.btn {
-    background-color: orange;
-}
-
 .reset {
     background-color: yellow;
 }
 
 .digits,.recessDigits {
     color: white;
-    font-size: 120px;
+    /*font-size: 120px;*/
 }

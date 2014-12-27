@@ -34,6 +34,7 @@
   max-width: 960px; 
   margin: 0 auto; 
   padding: 0 20px;
+  text-align: center;
   box-sizing: border-box; }
 .column,        
 .columns { 
@@ -125,8 +126,10 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222; }
+  color: #222;
+  background-color: #6caff1; }
 /*Charles: I modified the font to Open Sans rather than Raleway because Raleway has shit numbers.
+/*Charles: I also added the background color to here.
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -141,14 +144,16 @@ h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
 h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
 h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 
-/* Larger than phablet */
+/* Larger than phablet 
+Charles: I multiplied all the below h sizes by 2 because they were too small before.
+*/
 @media (min-width: 550px) {
-  h1 { font-size: 5.0rem; }
-  h2 { font-size: 4.2rem; }
-  h3 { font-size: 3.6rem; }
-  h4 { font-size: 3.0rem; }
-  h5 { font-size: 2.4rem; }
-  h6 { font-size: 1.5rem; }
+  h1 { font-size: 10.0rem; }
+  h2 { font-size: 8.4rem; }
+  h3 { font-size: 7.2rem; }
+  h4 { font-size: 6.0rem; }
+  h5 { font-size: 4.8rem; }
+  h6 { font-size: 3.0rem; }
 }
 
 p {
