@@ -95,9 +95,9 @@ $(document).ready(function() {
 	var tickerLong;
 	
 	//Start button event handler
-    $(".start-btn").click(function(){
+    $(".button").click(function(){
 		
-		$(".button").removeClass("start-btn");
+		$(".button").removeClass("button");
 		initialTime = new Date().getTime();
 		var delay = 50;
 	    tickerShort = setInterval(function(){ timer(initialTime, 10800, tickerShort, '.digits');}, delay);
@@ -110,8 +110,8 @@ $(document).ready(function() {
     
     $(".reset").click(function(){
     	clearInterval(tickerLong);
-    	$(".button").addClass("start-btn");
-    	$(".start-btn").html("START WORKING FOR 3 HOURS");
+    	$(".button").addClass("button");
+    	$(".button").html("START WORKING FOR 3 HOURS");
     });
    
 });
