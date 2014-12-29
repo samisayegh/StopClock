@@ -181,15 +181,53 @@ div {
 
 /* Progress Bar
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.progressvalue .progressbar { 
-  background-color: #FFF;
+.progresscontainer { 
   width: 75%;
   height: 5px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+ }
 
-.progressbar { 
-  opacity: 0.4; }
+.progressvalue {
+  height: 5px; 
+  background-color: #FFF;
+   }
+
+.progressbar {
+  background-color: white;
+  width: 75%;
+  height: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.breakbar {
+  background-color: red;
+  width: 5.6%;
+  height: 5px; 
+  opacity: 0.6;
+  float: left; }
+
+.workbar {
+  background-color: yellow;
+  opacity: 0.3;
+  height: 5px; 
+  float: left;
+}
+
+.work1 {
+  width: 38.9%;
+}
+
+.work2 {
+  width: 27.8%;
+}
+
+.work3 {
+  width: 16.5%;
+}
+
+
 
 
 /* Links
