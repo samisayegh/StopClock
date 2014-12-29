@@ -172,6 +172,7 @@ div {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .progbar { 
   background-color: #FFF;
+  width: 75%;
   height: 5px;
   margin-left: auto;
   margin-right: auto; }
