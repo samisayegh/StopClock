@@ -1,13 +1,11 @@
 $(document).ready(function() {
 
     /* 
-
     WARNING MESSAGE FOR REFRESH. TBA upon completion.
     
     window.onbeforeunload = function() {
         return "WARNING...THE CLOCK WILL BE RESET";
     }
-
     */
 
     //function pad makes it so that a number has a 0 before it if it's a single digit.
@@ -107,7 +105,7 @@ $(document).ready(function() {
     	else {
     		clearInterval(ticker)
 	    	$(".button").html("Start");
-	    	$(".digits").html("3 : 00 : 00");
+	    	$(".digits").html("3 h 00 m 00");
     	}
     	
     	clicked = !clicked;
