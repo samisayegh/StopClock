@@ -35,7 +35,6 @@
   max-width: 960px; 
   margin: 0 auto; 
   padding: 0 20px;
-  margin-top: 10%;
   text-align: center;
   box-sizing: border-box; }
 .column,        
@@ -161,8 +160,7 @@ Charles: I multiplied all the below h sizes by 2 because they were too small bef
 
 p {
   margin-top: 0;
-  color: white;
-  font-size: 1.6rem; }
+  color: white; }
 
 div {
   color: white;
@@ -172,6 +170,7 @@ div {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .progbar { 
   background-color: #FFF;
+  width: 72rem;
   height: 5px;
   margin-left: auto;
   margin-right: auto; }
@@ -190,11 +189,9 @@ a:hover {
 svg {
   fill: #ffffff;
   opacity: 0.4;
-  height: 38px;
-  padding: 0 30px;
 }
-
 svg:hover {
+  fill: #ffffff;
   opacity: 1;
 }
 
@@ -205,9 +202,10 @@ input[type="reset"],
 input[type="button"] {
   display: inline-block;
   height: 38px;
+  padding: 0 30px;
   color: #FFF;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 11px;
   font-weight: 600;
   line-height: 38px;
   letter-spacing: .1rem;
