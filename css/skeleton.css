@@ -181,25 +181,15 @@ div {
 
 /* Progress Bar
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-progress{
-  height: 5px;
-  width: 75%;
-  background-color: #fff;
-}
-
-progress::-webkit-progress-bar {  
-    background-color: #000;
-}  
-progress::-webkit-progress-value {  
-    background-color: #fff;
-}  
-
-.progbar { 
+.progressvalue .progressbar { 
   background-color: #FFF;
   width: 75%;
   height: 5px;
   margin-left: auto;
   margin-right: auto; }
+
+.progressbar { 
+  opacity: 0.4; }
 
 
 /* Links
