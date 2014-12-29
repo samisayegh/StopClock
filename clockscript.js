@@ -30,7 +30,7 @@ $(document).ready(function() {
             (t%3600)%60
             );
         
-        $(display).html(hours + ' : ' + pad(minutes) + ' : ' + pad(seconds));
+        $(display).html(hours + ' h ' + pad(minutes) + ' m ' + pad(seconds));
         
         console.log('success');
         console.log(time);
@@ -98,7 +98,7 @@ $(document).ready(function() {
     $(".button").click(function(){
 		if (clicked) {
 			initialTime = new Date().getTime();
-			var delay = 50;
+			var delay = 1;
 		    tickerShort = setInterval(function(){ timer(initialTime, 10800, tickerShort, '.digits');}, delay);
 		    setTimeout(function(){clearInterval(tickerShort);}, 500);
 		    delay = 1000;
