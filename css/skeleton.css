@@ -27,6 +27,7 @@
 */
 
 
+
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
@@ -193,6 +194,7 @@ svg {
   opacity: 0.4;
   height: 38px;
   padding: 0 30px;
+  margin: auto;
 }
 
 svg:hover {
@@ -204,8 +206,6 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  display: inline-block;
-  height: 38px;
   color: #FFF;
   text-align: center;
   font-size: 1.6rem;
@@ -214,7 +214,6 @@ input[type="button"] {
   letter-spacing: .1rem;
   text-transform: uppercase; 
   text-decoration: none;
-  white-space: nowrap;
   background-color: transparent;
   cursor: pointer;
   box-sizing: border-box; }
