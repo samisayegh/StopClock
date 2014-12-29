@@ -30,7 +30,7 @@ $(document).ready(function() {
             (t%3600)%60
             );
         
-        $(display).html(hours + ' h ' + pad(minutes) + ' m ' + pad(seconds));
+        $(display).html(hours + 'h ' + pad(minutes) + 'm ' + pad(seconds));
         
         console.log('success');
         console.log(time);
@@ -42,6 +42,8 @@ $(document).ready(function() {
         else {
         	alarmSequence(elapsed, totalInterval, tickerId);
         }
+        progressValue(elapsed);
+
     }
 
 	//alarm sequence
@@ -72,6 +74,12 @@ $(document).ready(function() {
 	    }
 
 	}
+
+	function progressValue(elapsed){
+		var fraction = elapsed/10800;
+		var lengthCompleted = fraction*720;
+		$('progress').progressbar('value', lengthCompleted);
+	}
 	function recessAlarm(){
 		var audio = new Audio('sounds/Temple_Bell.mp3');
 		audio.play();
@@ -91,7 +99,6 @@ $(document).ready(function() {
 	}
 	
 	var clicked = true;
-	var tickerShort;
 	var tickerLong;
 	
 	//Start button event handler
@@ -99,7 +106,7 @@ $(document).ready(function() {
 		if (clicked) {
 			initialTime = new Date().getTime();
 			var delay = 1;
-		    tickerShort = setInterval(function(){ timer(initialTime, 10800, tickerShort, '.digits');}, delay);
+		    var tickerShort = setInterval(function(){ timer(initialTime, 10800, tickerShort, '.digits');}, delay);
 		    setTimeout(function(){clearInterval(tickerShort);}, 500);
 		    delay = 1000;
 		    tickerLong = setInterval(function(){ timer(initialTime, 10800, tickerLong, '.digits');}, delay);
