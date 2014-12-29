@@ -95,24 +95,23 @@ $(document).ready(function() {
 	var tickerLong;
 	
 	//Start button event handler
-    $(".button").click(function(){
+    $(".start-btn").click(function(){
 		
-    	if (clicked == true) {
+		$(".button").removeClass("start-btn");
 		initialTime = new Date().getTime();
 		var delay = 50;
 	    tickerShort = setInterval(function(){ timer(initialTime, 10800, tickerShort, '.digits');}, delay);
 	    setTimeout(function(){clearInterval(tickerShort);}, 500);
 	    delay = 1000;
 	    tickerLong = setInterval(function(){ timer(initialTime, 10800, tickerLong, '.digits');}, delay);
-		//$(".button").html("Reset");
-    	}
 
-    	else {
-    		clearInterval(tickerLong)
-	    	$(".button").html("START WORKING FOR 3 HOURS");
-	    	//$(".digits").html("3 h 00 m 00");
-    	}
-    	
-    	clicked = !clicked;
+
     });
+    
+    $(".reset").click(function(){
+    	clearInterval(tickerLong);
+    	$(".button").addClass("start-btn");
+    	$(".start-btn").html("START WORKING FOR 3 HOURS");
+    });
+   
 });
