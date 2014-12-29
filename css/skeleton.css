@@ -175,8 +175,7 @@ div {
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 38px;
-  letter-spacing: .1rem;
-  text-transform: uppercase; 
+  letter-spacing: .1rem; 
   text-decoration: none;
 }
 
