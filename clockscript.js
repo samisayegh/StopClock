@@ -96,21 +96,22 @@ $(document).ready(function() {
 	
 	//Start button event handler
     $(".button").click(function(){
-		
-		$(".button").removeClass("button");
-		initialTime = new Date().getTime();
-		var delay = 50;
-	    tickerShort = setInterval(function(){ timer(initialTime, 10800, tickerShort, '.digits');}, delay);
-	    setTimeout(function(){clearInterval(tickerShort);}, 500);
-	    delay = 1000;
-	    tickerLong = setInterval(function(){ timer(initialTime, 10800, tickerLong, '.digits');}, delay);
-
-
+		if (clicked) {
+			initialTime = new Date().getTime();
+			var delay = 50;
+		    tickerShort = setInterval(function(){ timer(initialTime, 10800, tickerShort, '.digits');}, delay);
+		    setTimeout(function(){clearInterval(tickerShort);}, 500);
+		    delay = 1000;
+		    tickerLong = setInterval(function(){ timer(initialTime, 10800, tickerLong, '.digits');}, delay);
+		    $(".digits").removeClass("button");
+		};
+		clicked = false;
     });
     
     $(".reset").click(function(){
+		clicked = true;
     	clearInterval(tickerLong);
-    	$(".button").addClass("button");
+    	$(".digits").addClass("button");
     	$(".button").html("START WORKING FOR 3 HOURS");
     });
    
