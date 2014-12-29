@@ -91,21 +91,26 @@ $(document).ready(function() {
 	}
 	
 	var clicked = true;
-	var ticker;
+	var tickerShort;
+	var tickerLong;
 	
 	//Start button event handler
     $(".button").click(function(){
 		
     	if (clicked == true) {
 		initialTime = new Date().getTime();
-	    	ticker = setInterval(function(){ timer(initialTime, 10800, ticker, '.digits');}, 1000);
-		$(".button").html("Reset");
+		var delay = 50;
+	    tickerShort = setInterval(function(){ timer(initialTime, 10800, tickerShort, '.digits');}, delay);
+	    setTimeout(function(){clearInterval(tickerShort);}, 500);
+	    delay = 1000;
+	    tickerLong = setInterval(function(){ timer(initialTime, 10800, tickerLong, '.digits');}, delay);
+		//$(".button").html("Reset");
     	}
 
     	else {
-    		clearInterval(ticker)
-	    	$(".button").html("Start");
-	    	$(".digits").html("3 h 00 m 00");
+    		clearInterval(tickerLong)
+	    	$(".button").html("START WORKING FOR 3 HOURS");
+	    	//$(".digits").html("3 h 00 m 00");
     	}
     	
     	clicked = !clicked;
