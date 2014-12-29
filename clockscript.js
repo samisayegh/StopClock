@@ -78,7 +78,7 @@ $(document).ready(function() {
 	function progressValue(elapsed){
 		var fraction = elapsed/10800;
 		var lengthCompleted = fraction*720;
-		$('progressvalue').width(lengthCompleted);
+		$('.progressvalue').width(lengthCompleted);
 	}
 	function recessAlarm(){
 		var audio = new Audio('sounds/Temple_Bell.mp3');
