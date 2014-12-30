@@ -68,7 +68,7 @@ $(document).ready(function() {
 	    	case 10200:
 	    		recessAlarm();
 	    	//Closing alarm. Productivity success!
-	    	case totalInterval:
+	    	case elapsed >= totalInterval:
 	    		closingAlarm(tickerId);
 	    		break;
 	    }
@@ -107,10 +107,11 @@ $(document).ready(function() {
 			initialTime = new Date().getTime();
 			var delay = 1;
 		    var tickerShort = setInterval(function(){ timer(initialTime, 10800, tickerShort, '.digits');}, delay);
-		    setTimeout(function(){clearInterval(tickerShort);}, 500);
+		    setTimeout(function(){clearInterval(tickerShort);}, 5);
 		    delay = 1000;
 		    tickerLong = setInterval(function(){ timer(initialTime, 10800, tickerLong, '.digits');}, delay);
 		    $(".digits").removeClass("button");
+		    $(".shield").animate({width: "0%"}, 1500);
 		};
 		clicked = false;
     });
@@ -118,6 +119,7 @@ $(document).ready(function() {
     $(".reset").click(function(){
 		clicked = true;
     	clearInterval(tickerLong);
+    	$(".shield").animate({width: "100%"}, 1500);
     	$(".digits").addClass("button");
     	$(".button").html("START WORKING FOR 3 HOURS");
     });
