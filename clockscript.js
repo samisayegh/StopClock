@@ -111,7 +111,7 @@ $(document).ready(function() {
 		    delay = 1000;
 		    tickerLong = setInterval(function(){ timer(initialTime, 10800, tickerLong, '.digits');}, delay);
 		    $(".digits").removeClass("button");
-		    $(".shield").animate({width: "0"}, 1500);
+		    $(".progressvalue").animate({width: "0"}, 1500);
 		};
 		clicked = false;
     });
@@ -119,7 +119,7 @@ $(document).ready(function() {
     $(".reset").click(function(){
 		clicked = true;
     	clearInterval(tickerLong);
-    	$(".shield").animate({width: "100%"}, 1500);
+    	$(".progressvalue").animate({width: "100%"}, 1500);
     	$(".digits").addClass("button");
     	$(".button").html("START WORKING FOR 3 HOURS");
     });
