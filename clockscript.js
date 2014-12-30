@@ -42,7 +42,7 @@ $(document).ready(function() {
         else {
         	alarmSequence(elapsed, totalInterval, tickerId);
         }
-        progressValue(elapsed);
+        progressValue(elapsed, totalInterval);
 
     }
 
@@ -68,16 +68,17 @@ $(document).ready(function() {
 	    	case 10200:
 	    		recessAlarm();
 	    	//Closing alarm. Productivity success!
-	    	case elapsed >= totalInterval:
+	    	case totalInterval:
 	    		closingAlarm(tickerId);
 	    		break;
 	    }
 
 	}
 
-	function progressValue(elapsed){
-		var fraction = elapsed/10800;
-		var lengthCompleted = fraction*720;
+	function progressValue(elapsed, totalInterval){
+		var fraction = elapsed/totalInterval;
+		var totalBarWidth = $('.progresscontainer').width();
+		var lengthCompleted = fraction*totalBarWidth;
 		$('.progressvalue').width(lengthCompleted);
 	}
 	function recessAlarm(){
