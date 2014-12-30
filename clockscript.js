@@ -111,7 +111,7 @@ $(document).ready(function() {
 		    delay = 1000;
 		    tickerLong = setInterval(function(){ timer(initialTime, 10800, tickerLong, '.digits');}, delay);
 		    $(".digits").removeClass("button");
-		    $(".shield").animate({width: "0%"}, 1500);
+		    $(".shield").animate({width: "0"}, 1500);
 		};
 		clicked = false;
     });
