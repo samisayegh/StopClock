@@ -24,21 +24,39 @@
                 </div>
             </div>
             <div class="progresscontainer">
-                    <div class="workbar work1"></div>
-                    <div class="breakbar"></div>
-                    <div class="workbar work2"></div>
-                    <div class="breakbar"></div>
-                    <div class="workbar work3"></div>
-                    <div class="breakbar"></div>
+                    <div class="work bar session1"></div>
+                    <div class="break bar"></div>
+                    <div class="work bar session2"></div>
+                    <div class="break bar"></div>
+                    <div class="work bar session3"></div>
+                    <div class="break bar"></div>
                     <div class="progressvalue"></div>
                     <div class="shield"></div>
-                <div class="breakexplain">
-                    <div class="workline work1"></div>
-                    <div class="breakline"></div>
-                    <div class="workline work2"></div>
-                    <div class="breakline"></div>
-                    <div class="workline work3"></div>
-                    <div class="breakline"></div>
+                    <!--
+                    The code below contains the numbers that will count down as during the breaks. They shouldn't be there before the START button is hit. I can put them in a div that we activate upon start but I dunno what the best way to do that would be yet. The one thing I prepared for is turning them opaque when they are ticking down. Just add the class 'active' to the break that's counting and make sure there is no text when it's done.
+
+                    <div class="work gap session1"></div>
+                    <div class="break gap">10m</div>
+                    <div class="work gap session2"></div>
+                    <div class="break gap">10m</div>
+                    <div class="work gap session3"></div>
+                    <div class="break gap">10m</div>
+
+                    -->
+                <div class="breakexplain"> <!--whole breakexplain div should be killed when start is pressed-->
+                    <div class="work gap session1"></div>
+                    <div class="break line"></div>
+                    <div class="work gap session2"></div>
+                    <div class="break line"></div>
+                    <div class="work gap session3"></div>
+                    <div class="break line"></div>
+                    <!--This is where the text comes in-->
+                    <div class="work gap session1"></div>
+                    <div class="break gap active">10</div>
+                    <div class="work gap session2 active" style="text-align: left;">minute breaks are assigned and an alarm will alert you</div>
+                    <div class="break gap"></div>
+                    <div class="work gap session3"></div>
+                    <div class="break gap"></div>
                 </div>
             </div>
             

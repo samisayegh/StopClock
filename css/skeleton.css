@@ -188,51 +188,57 @@ div {
   margin-right: auto;
  }
 
-.progressvalue, .shield {
+.breakexplain {
+  margin-top: 2%;
+}
+
+
+.progressvalue, .shield{
   width: 100%;
   height: 5px; 
   background-color: #fff;
 }
 
-.breakbar, .workbar {
+.break {
+  width: 5.6%;
+  opacity: 0.6; }
+
+.work {
+  opacity: 0.3;
+}
+
+.bar {
   background-color: #fff;
   height: 5px; 
   float: left;
 }
 
-.breakbar {
-  width: 5.6%;
-  opacity: 0.6; }
-
-.workbar {
-  opacity: 0.3;
+.line {
+  background-color: #fff;
+  height: 1px;
+  float: left;
+  opacity: 1;
 }
 
-.work1 {
-  width: 38.9%;
-}
-
-.work2 {
-  width: 27.8%;
-}
-
-.work3 {
-  width: 16.5%;
-}
-
-.breakexplain {
-  margin-top: 2%;
-}
-
-.breakline, .workline {
+.gap {
   height: 1px;
   float: left;
 }
 
-.breakline {
-  background-color: #fff;
-  width: 5.6%;
+.active {
   opacity: 1;
+}
+
+.session1 {
+  width: 38.9%;
+}
+
+.session2 {
+  width: 27.8%;
+}
+
+.session3 {
+  width: 16.5%;
 }
 
 
