@@ -36,7 +36,6 @@
   max-width: 960px; 
   margin: 0 auto; 
   padding: 0 20px;
-  margin-top: 10%;
   text-align: center;
   box-sizing: border-box; }
 .column,        
@@ -128,11 +127,36 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
+  margin-top: 15%;
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
-  background-color: #00BCD4; }
+  background-color: #00BCD4;}
+footer {
+  position:absolute;
+  width: 100%;
+  bottom:0;
+  font-size: 1.0em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;}
 /*Charles: I modified the font to Open Sans rather than Raleway because Raleway has shit numbers.
-/*Charles: I also added the background color to here.
+/*Charles: I also added the background color to here.*/
+
+.linkies, .description {
+    width: 100%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+.description {
+    color: #000;
+    background-image: url("../images/cream_pixels.png");
+}
+
+.linkies {
+    background: rgba(0, 0, 0, .5);
+}
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -169,20 +193,10 @@ div {
   color: white;
 }
 
-.digits {
-  color: #FFF;
-  text-align: center;
-  font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: .1rem; 
-  text-decoration: none;
-}
-
 /* Progress Bar
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .progresscontainer { 
-  width: 75%;
+  width: 100%;
   height: 5px;
   margin-left: auto;
   margin-right: auto;
@@ -243,6 +257,9 @@ div {
   width: 16.5%;
 }
 
+.reset {
+    vertical-align: right;
+}
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -266,18 +283,17 @@ svg:hover {
   opacity: 1;
 }
 
-.button,
+.button, .digits,
 button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   color: #FFF;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 2.0rem;
   font-weight: 600;
   line-height: 38px;
   letter-spacing: .1rem;
-  text-transform: uppercase; 
   text-decoration: none;
   background-color: transparent;
   cursor: pointer;
