@@ -142,16 +142,14 @@ $(document).ready(function() {
 	//Start button event handler
     $(".button").click(function(){
 		if (clicked) {
+			$(".digits").fadeOut(1000).fadeIn(200);
 			initialTime = new Date().getTime();
-			var delay = 1;
-		    var tickerShort = setInterval(function(){ timer(initialTime, 10800, tickerShort, '.digits');}, delay);
-		    setTimeout(function(){clearInterval(tickerShort);}, 5);
-		    delay = 1000;
-		    tickerLong = setInterval(function(){ timer(initialTime, 10800, tickerLong, '.digits');}, delay);
+		    tickerLong = setInterval(function(){ timer(initialTime, 10800, tickerLong, '.digits');}, 1000);
 		    $(".digits").removeClass("button");
-		    $(".progressvalue").animate({width: "0"}, 1500);
-		    $(".breakexplain").hide();
-		    $(".wrapper").show();
+		    $(".progressvalue").animate({width: "0"}, 1200);
+		    
+		    $(".breakexplain").fadeOut(1000);
+		    setTimeout(function(){$(".wrapper").fadeIn(200);}, 1000);
 		};
 		clicked = false;
     });
@@ -161,16 +159,23 @@ $(document).ready(function() {
 		clicked = true;
 		breakCounter = 0;
     	clearInterval(tickerLong);
-    	$(".progressvalue").animate({width: "100%"}, 1500);
-    	$(".digits").addClass("button");
-    	$(".button").html("START WORKING FOR 3 HOURS");
+    	$(".progressvalue").animate({width: "100%"}, 1000);
+    	$(".digits").addClass("button").fadeOut(500).fadeIn(500);
+    	setTimeout(function(){$(".button").html("START WORKING FOR 3 HOURS");}, 500);
+    	
     	
     	clearInterval(recessTicker);
-    	$(".recessDigits1, .recessDigits2, .recessDigits3").html("10m");
     	breakCounter = 0;
+    	$(".wrapper").fadeOut(500);
+    	setTimeout(function(){
+    		$(".recessDigits1, .recessDigits2, .recessDigits3").html("10m");
+    		$('.breakexplain').fadeIn(500);
+    	},500);
+    	
+    	
 		
-		$(".wrapper").hide();
-    	$(".breakexplain").show();
+		
+    	//$(".breakexplain").fadeIn(1200);
 		
     });
    
