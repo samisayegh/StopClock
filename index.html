@@ -9,8 +9,8 @@
         <script language="javascript" type="text/javascript" src="clockscript.js"></script>
     </head>
     
-<body>
-    <title>Best Workflow</title>
+    <body>
+        <title>Best Workflow</title>
         <div class = "container">
             <div class="row">
                 <div class="offset-by-four button digits four columns">START WORKING FOR 3 HOURS</div>
@@ -24,26 +24,27 @@
                 </div>
             </div>
             <div class="progresscontainer">
-                    <div class="progressvalue"></div>
-                    <div class="work bar session1"></div>
-                    <div class="break bar"></div>
-                    <div class="work bar session2"></div>
-                    <div class="break bar"></div>
-                    <div class="work bar session3"></div>
-                    <div class="break bar"></div>
-                    
-                    
-                    <!--
-                    The code below contains the numbers that will count down as during the breaks. They shouldn't be there before the START button is hit. I can put them in a div that we activate upon start but I dunno what the best way to do that would be yet. The one thing I prepared for is turning them opaque when they are ticking down. Just add the class 'active' to the break that's counting and make sure there is no text when it's done.
-
+                <div class="progressvalue"></div>
+                <div class="work bar session1"></div>
+                <div class="break bar"></div>
+                <div class="work bar session2"></div>
+                <div class="break bar"></div>
+                <div class="work bar session3"></div>
+                <div class="break bar"></div>
+                      
+                <!--
+                The code below contains the numbers that will count down as during the breaks. They shouldn't be there before the START button is hit. I can put them in a div that we activate upon start but I dunno what the best way to do that would be yet. The one thing I prepared for is turning them opaque when they are ticking down. Just add the class 'active' to the break that's counting and make sure there is no text when it's done.
+                -->
+                
+                <div class="wrapper">
                     <div class="work gap session1"></div>
-                    <div class="break gap">10m</div>
+                    <div class="break gap recessDigits1">10m</div>
                     <div class="work gap session2"></div>
-                    <div class="break gap">10m</div>
+                    <div class="break gap recessDigits2">10m</div>
                     <div class="work gap session3"></div>
-                    <div class="break gap">10m</div>
-
-                    -->
+                    <div class="break gap recessDigits3">10m</div>
+                </div>
+                    
                 <div class="breakexplain"> <!--whole breakexplain div should be killed when start is pressed-->
                     <div class="work gap session1"></div>
                     <div class="break line"></div>
@@ -61,7 +62,7 @@
                 </div>
             </div>
         </div>
-</body>
+    </body>
 </html>
 
 <!--Remember to share this site with @Codecademy on twitter-->
