@@ -203,7 +203,7 @@ div {
  }
 
 .breakexplain {
-  margin-top: 2%;
+  margin-top: 10px;
 }
 
 
@@ -217,7 +217,8 @@ div {
 
 .break {
   width: 5.6%;
-  opacity: 0.6; }
+  opacity: 0.6;
+  cursor: default;}
 
 .work {
   opacity: 0.3;
@@ -259,6 +260,7 @@ div {
 
 .reset {
     vertical-align: right;
+    cursor: pointer;
 }
 
 /* Links
@@ -277,6 +279,9 @@ svg {
   height: 38px;
   padding: 0 30px;
   margin: auto;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out
 }
 
 svg:hover {
@@ -296,8 +301,13 @@ input[type="button"] {
   letter-spacing: .1rem;
   text-decoration: none;
   background-color: transparent;
-  cursor: pointer;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  cursor: default;
+  transition: color .25s ease-in-out;
+  -moz-transition: color .25s ease-in-out;
+  -webkit-transition: color .25s ease-in-out;}
+.button {
+cursor: pointer;}
 .button:hover,
 button:hover,
 input[type="submit"]:hover,
