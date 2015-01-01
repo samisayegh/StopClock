@@ -66,7 +66,7 @@ $(document).ready(function() {
         
     	if (elapsed >= totalInterval) {
     		clearInterval(tickerId);
-    		$(display).html('0m');
+    		$(display).html('');
     		$(display).removeClass("active");
     	};
     }
@@ -92,6 +92,8 @@ $(document).ready(function() {
 	    	//170 min break
 	    	case 10200:
 	    		recessAlarm();
+	    		//Transitions background colour over 10 min.
+	    		$("body").animate({backgroundColor: '#009688'}, 600000);
 	    }
 	    //Closing alarm. Productivity success!
 		if (elapsed >= totalInterval) {
@@ -158,6 +160,8 @@ $(document).ready(function() {
     $(".reset").click(function(){
 		clicked = true;
 		breakCounter = 0;
+		//Resets background colour
+		$("body").animate({backgroundColor: '#00BCD4'}, 1000); 
     	clearInterval(tickerLong);
     	$(".progressvalue").animate({width: "100%"}, 1000);
     	$(".digits").addClass("button").fadeOut(500).fadeIn(500);
@@ -171,12 +175,6 @@ $(document).ready(function() {
     		$(".recessDigits1, .recessDigits2, .recessDigits3").html("10m");
     		$('.breakexplain').fadeIn(500);
     	},500);
-    	
-    	
-		
-		
-    	//$(".breakexplain").fadeIn(1200);
-		
     });
    
 });
