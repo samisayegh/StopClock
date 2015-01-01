@@ -269,8 +269,9 @@ div {
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-a { 
-  color: #1EAEDB; }
+a {
+  text-decoration: none;
+  color: white; }
 a:hover { 
   color: #0FA0CE; }
 
