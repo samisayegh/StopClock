@@ -188,7 +188,10 @@ Charles: I multiplied all the below h sizes by 2 because they were too small bef
 p {
   margin-top: 0;
   color: white;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  text-align: left;
+  word-spacing: 1px;
+}
 
 div {
   color: white;
