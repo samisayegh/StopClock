@@ -139,20 +139,21 @@ footer {
   font-size: 1.0em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;}
+  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;}
 /*Charles: I modified the font to Open Sans rather than Raleway because Raleway has shit numbers.
 /*Charles: I also added the background color to here.*/
 
 .linkies, .description {
     width: 100%;
-    padding-bottom: 1%;
-    padding-top: 1%;
 }
 
 .description {
-    color: #000;
+    color: #fff;
     background-image: url("../images/cream_pixels.png");
+}
+
+.description p{
+    text-align: center;
 }
 
 .linkies {
@@ -189,7 +190,6 @@ p {
   margin-top: 0;
   color: white;
   font-size: 1.6rem;
-  text-align: left;
   word-spacing: 1px;
 }
 
@@ -446,11 +446,17 @@ pre > code {
 
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+table {
+  width: 100%;
+}
+tr {
+  height:100%;
+}
 th,
 td {
   padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #E1E1E1; }
+  text-align: center;
+  vertical-align: middle; }
 th:first-child,
 td:first-child {
   padding-left: 0; }
@@ -471,7 +477,6 @@ blockquote,
 form,
 dl,
 figure,
-table,
 p,
 ul,
 ol,

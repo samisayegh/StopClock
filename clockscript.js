@@ -93,7 +93,7 @@ $(document).ready(function() {
 	    	case 10200:
 	    		recessAlarm();
 	    		//Transitions background colour over 10 min.
-	    		$("body").animate({backgroundColor: '#009688'}, 600000);
+	    		$("body").animate({backgroundColor: '#FFC107'}, 600000);
 	    }
 	    //Closing alarm. Productivity success!
 		if (elapsed >= totalInterval) {
