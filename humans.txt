@@ -1,0 +1,24 @@
+/* TEAM */
+	Guy 1: Charles Gedeon
+	Twitter: @charlesgedeon
+	From: Montreal, Canada + Zabbougha, Lebanon
+
+	Guy 2: Sami Sayegh
+	Twitter: @samisayeg
+	From: Montreal, Canada + Beirut, Lebanon
+
+/* THANKS */
+
+	Our Teachers: codecademy
+	Twitter: @codecademy
+	Website: http://codecademy.com
+
+	Work space: District 3
+	Located in: Montreal, Canada
+	Website: http://d3center.ca
+
+/* SITE */
+	Last update:2015/02/09
+	Language: English
+	Doctype:HTML5
+	IDE: Sublime Text, Illustrator 
