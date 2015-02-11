@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+	//Wrapper contains the active 10 minute break divs. Is hidden as long as breakexplain is being shown.
 	$(".wrapper").hide();
     /* 
     WARNING MESSAGE FOR REFRESH. TBA upon completion.
@@ -32,9 +32,6 @@ $(document).ready(function() {
             );
         
         $(display).html(hours + 'h ' + pad(minutes) + 'm ' + pad(seconds));
-        
-        console.log('success');
-        console.log(time);
        
         alarmSequence(elapsed, totalInterval, tickerId);
         progressValue(elapsed, totalInterval);
@@ -58,12 +55,8 @@ $(document).ready(function() {
             );
         
         $(display).html(minutes+ 'm ');
-        
-        console.log('success');
-        console.log(time);
-        
+
         //Takes care of closing the recess timer when the break is over
-        
     	if (elapsed >= totalInterval) {
     		clearInterval(tickerId);
     		$(display).html('');
@@ -89,18 +82,20 @@ $(document).ready(function() {
 	    	//140 min resume
 	    	case 8400:
 	    		resumeAlarm();
+	    		break;
 	    	//170 min break
 	    	case 10200:
 	    		recessAlarm();
 	    		//Transitions background colour over 10 min.
 	    		$("body").animate({backgroundColor: '#FFC107'}, 600000);
+	    		break;
 	    }
-	    //Closing alarm. Productivity success!
+	    //Closing alarm. Productivity session success!
 		if (elapsed >= totalInterval) {
 			closingAlarm(tickerId);
 		};	
 	}
-	//Progress updater
+	//Progress bar updater
 	function progressValue(elapsed, totalInterval){
 
 		if (elapsed>=totalInterval) {
@@ -121,7 +116,8 @@ $(document).ready(function() {
 		var activeRecessDiv = ".recessDigits" + breakCounter;
 		$(activeRecessDiv).addClass("active");
 		var startTime = new Date().getTime();
-		recessTicker = setInterval(function(){recessTimer(startTime, 600, recessTicker, activeRecessDiv);}, 1000);
+		//The 10 minute recess updater. Function runs once a minute to reflect minutes left in break.
+		recessTicker = setInterval(function(){recessTimer(startTime, 600, recessTicker, activeRecessDiv);}, 60000);
 	}
 
 	function resumeAlarm(){
@@ -161,15 +157,14 @@ $(document).ready(function() {
 		clicked = true;
 		breakCounter = 0;
 		//Resets background colour
-		$("body").animate({backgroundColor: '#00BCD4'}, 1000); 
+		$("body").animate({backgroundColor: '#00BCD4'}, 10000); 
     	clearInterval(tickerLong);
     	$(".progressvalue").animate({width: "100%"}, 1000);
     	$(".digits").addClass("button").fadeOut(500).fadeIn(500);
     	setTimeout(function(){$(".button").html("START WORKING FOR 3 HOURS");}, 500);
     	
-    	
+    	//Resets 10 min recess breaks
     	clearInterval(recessTicker);
-    	breakCounter = 0;
     	$(".wrapper").fadeOut(500);
     	setTimeout(function(){
     		$(".recessDigits1, .recessDigits2, .recessDigits3").html("10m");
