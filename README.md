@@ -3,4 +3,6 @@ StopClock
 
 A productivity tool for intensive working sessions
 
-The user visiting the site will be able to enter the number of hours they want to work. Depending on the number, an algorithm will divide the total time into periods of work and recess. An alarm will ring to signal a transition from one session to the next. The goal is to provide cues that allow the user to adhere to a highly productive working schedule, that contains effective time proportions for work and leisure.
+Work for 3 hours, divided into 70,50, and 30 minute chunks with 10 minute breaks in between. An alarm will ring to signal a break, and when it is time to transition to the next work session. A colourful surprise awaits for those who make it to the end.
+
+www.work3hours.com
